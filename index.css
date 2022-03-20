@@ -1,0 +1,320 @@
+/* discripstion heading  */
+.container{
+	display: inline-block;
+}
+
+/* animation of sliding text  */
+.typed-out{
+overflow: hidden;
+border-right: .15em solid rgb(0, 165, 36);
+white-space: nowrap;
+animation: typing 2.5s steps(50, end) forwards;
+font-size: 1.6rem;
+width: 0;
+}
+  
+/* effect for text sliding*/
+@keyframes typing{
+from { width: 0 }
+to { width: 100% }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* color hovering effect */
+#myDIV{
+background: white;
+animation: mymove 5s infinite;
+margin-top: 1%;
+}
+  
+/* color define for effect */
+@keyframes mymove{
+from {background-color:hsl(56, 100%, 50%);}
+to {background-color: rgba(116, 255, 2, 0.493);}
+}
+
+#st{
+margin-top: 10%;
+}
+
+/* page body */
+body{
+  font-family: Merriweather, serif;
+}
+
+/* define color for  main where heading is asighn*/
+main{
+color: var(--text, rgb(2, 2, 2));
+}
+
+/* define backgroung color for day */
+main {
+--gradDark: hsl(144, 93%, 60%);
+--gradLight: hsla(71, 93%, 60%, 0.788);
+background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+padding: 120px 40px 40px 40px;
+min-height: 100vh;
+text-align: center;
+}
+
+/* positioning and asighning color elemet */
+.theme-switch__input:checked ~ main,
+.theme-switch__input:checked ~ label{
+--text: rgb(5, 253, 220);
+}
+
+.theme-switch__input:checked ~ main{
+--gradDark: hsl(198, 44%, 11%);
+--gradLight: hsl(198, 39%, 29%);
+}
+
+/* fixig the size of switch */
+.theme-switch__input,
+.theme-switch__label{
+position: absolute;
+z-index: 1;
+}
+
+/* switch opacity of inside   */
+.theme-switch__input{
+opacity: 0;
+}
+
+/* set color of switch round button */
+.theme-switch__input:hover + .theme-switch__label, .theme-switch__input:focus + .theme-switch__label{
+background-color: lightSlateGray;
+}
+
+/* set color of switch round button */
+.theme-switch__input:hover + .theme-switch__label span::after, .theme-switch__input:focus + .theme-switch__label span::after {
+  background-color: #cad3c8;
+}
+
+/* shaping the switch */
+.theme-switch__label{
+padding: 20px;
+margin: 60px;
+transition: background-color 200ms ease-in-out;
+width: 120px;
+height: 42px;
+border-radius: 50px;
+text-align: center;
+background-color: slateGray;
+box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+}
+
+/* seting of sun moon position */
+.theme-switch__label::before, .theme-switch__label::after{
+font-size: 2rem;
+position: absolute;
+transform: translate3d(0, -50%, 0);
+top: 50%;
+}
+
+/* fix the sun with color */
+.theme-switch__label::before{
+content: "☼";
+right: 100%;
+margin-right: 10px;
+color: rgb(2, 2, 2);
+}
+
+/* fix the moon with color */
+.theme-switch__label::after{
+content: "☾";
+left: 100%;
+margin-left: 10px;
+color: rgb(0, 0, 0);
+}
+
+/* fix switch name and btn 1*/
+.theme-switch__label spa{
+position: absolute;
+bottom: calc(100% + 10px);
+left: 0;
+width: 100%;
+}
+
+/* fix switch name and btn 2*/
+.theme-switch__label span::after{
+position: absolute;
+top: calc(100% + 15px);
+left: 5px;
+width: 40px;
+height: 41px;
+content: "";
+border-radius: 50%;
+background-color: lightBlue;
+transition: transform 200ms, background-color 200ms;
+box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+top: 1%;
+}
+
+/* arrangement od color switch */
+.theme-switch__input:checked ~ .theme-switch__label{
+background-color: lightSlateGray;
+}
+.theme-switch__input:checked ~ .theme-switch__label::before{
+color: lightSlateGray;
+}
+.theme-switch__input:checked ~ .theme-switch__label::after{
+color: turquoise;
+}
+.theme-switch__input:checked ~ .theme-switch__label span::after{
+transform: translate3d(70px, 0, 0);
+}
+
+
+/* Basic Style Of ToDO List this is todo section*/
+
+
+/* todo-list structure */
+.container{
+border-radius: 4px;
+padding: 20px 20px 60px 20px;
+display: block;
+background:white;
+width: 426px;
+margin: 90px auto 0;
+}
+
+/* todo heading  */
+h2{
+text-align: center;
+font-weight: 300;
+letter-spacing: 0.03em;
+}
+
+ul{
+padding: 0;
+margin: 0;
+}
+
+li *{
+float: left;
+}
+li,
+
+h3{
+clear: both;
+list-style: none;
+}
+input,
+
+/* setup the button */
+button{
+outline: none;
+}
+
+/* shaping the button of todo list */
+button{
+background: none;
+border: 0px;
+color: rgb(0, 0, 0);
+font-size: 15px;
+width: 60px;
+margin: 10px 0 0;
+font-family: Lato, sans-serif;
+cursor: pointer;
+margin-top: 0%;
+}
+
+button:hover{
+color: #333;
+}
+
+/* Heading */
+h3,
+label[for="new-task"]{
+color: #333;
+font-weight: 700;
+font-size: 15px;
+border-bottom: 2px solid #333;
+padding: 30px 0 10px;
+margin: 0;
+text-transform: uppercase;
+}
+
+/* input setup */
+input[type="text"]{
+margin: 0;
+font-size: 18px;
+line-height: 18px;
+height: 18px;
+padding: 10px;
+ border: 1px solid #ddd;
+background: #fff;
+border-radius: 6px;
+font-family: Lato, sans-serif;
+color: #888;
+}
+
+input[type="text"]:focus{
+  color: #333;
+}
+
+/* New Task */
+label[for="new-task"]{
+display: block;
+margin: 0 0 20px;
+}
+
+input#new-task{
+float: left;
+width: 318px;
+}
+
+p > button:hover{
+color: #0fc57c;
+}
+
+/* Task list */
+li{
+overflow: hidden;
+padding: 20px 0;
+border-bottom: 1px solid #eee;
+}
+
+/* config checkbox */
+li > input[type="checkbox"]{
+margin: 0 10px;
+position: relative;
+top: 15px;
+}
+
+li > label{
+font-size: 18px;
+line-height: 40px;
+width: 237px;
+padding: 0 0 0 11px;
+}
+
+li > input[type="text"]{
+width: 226px;
+}
+
+li > .delete:hover{
+color: #cf2323;
+}
+
+/* Completed */
+#completed-tasks label{
+text-decoration: line-through;
+color: #888;
+}
+
+/* Edit Task */
+ul li input[type="text"]{
+display: none;
+}
+
+ul li.editMode input[type="text"]{
+display: block;
+}
+
+ul li.editMode label{
+display: none;
+}

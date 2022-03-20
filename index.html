@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- title  -->
+	<title>ToDo-List 📑</title>
+
+	<!--add fevicon -->
+	<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX_A94I5CesahkhExrvB0het4B-l27UMytt0hT-NKzUvFxJeNAAzn1Y42T5BqXKodKIQU&usqp=CAU">
+
+	<!-- link css -->
+	<link rel="stylesheet" href="index.css">
+</head>
+ <body  class="page" id="myDIV">
+
+	
+
+     <!-- background colors switcher -->
+  <div >
+	<!--Theme switch-->
+	<input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+	<label for="themeSwitch" class="theme-switch__label">
+	<span id="st">
+	<br>
+	<p>Switch </p>
+	</span>
+	</label>
+
+	<!--Main page content-->
+	<main>
+	<div class="wrapper">
+	<h1>To-DO List </h1>
+	<p class="typed-out">Shedule your task...</p>
+	</div>
+
+	<!-- todo list -->
+	<div class="container" >
+	<h2>Todo List</h2>
+	<p>
+    <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
+	</p>
+
+	<!-- Heading of todo-list  -->
+	<h3>Total No. Task</h3>
+	<ul id="incomplete-tasks">
+	</ul>
+	<h3>Completed</h3>
+	<ul id="completed-tasks">
+	</ul>
+	</div>
+	</main>
+  </div>
+ 
+ </body>
+  <!-- link js to html  -->
+  <script type="text/javascript" src="index.js"></script>
+</html>
